@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Formulaire</title>
+</head>
+
+<body>
+         <br>
+        <H1 align=" center"><u>Form</u></H1>
+        
+        <form align="center" action="{{path('InsertInfos')}}" method="get">
+            <label for="name"><b>Name: </b></label>   
+            <input type="text" name="name" placeholder="Add name"><br><br>
+            <label for="familyname"><b>FamilyName: </b></label>   
+            <input type="text" name="familyname" placeholder="Add family name"><br><br>
+            <label for="email"><b>Email: </b></label>   
+            <input type="email" name="email" placeholder="Add birthday"><br><br>
+             <p><b>{{exception}}</b></p> 
+            <label for="Birthyear"><b>BirthYear: </b></label>   
+            <input type="date" name="Birthyear" placeholder="Add BirthYear"> <br><br>
+            <label for="ville"><b>City: </b></label>   
+            <input type="text" name="ville" placeholder="Add City "><br><br>
+            <label for="numtel"><b>Phone Number: </b></label>   
+            <input type="text" name="numtel" placeholder="Add Phone Number"><br><br>
+            <button type="submit">submit</button>
+        </form>
+
+</body>
+ 
+</html>

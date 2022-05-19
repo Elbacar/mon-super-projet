@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Table</title>
+</head>
+<body>  
+
+        <h3 align='center'> ALL USERS DATA</h3>
+        <table border='1' align='center'>
+                <thead>
+                    <tr>
+                        <th>id</th>     
+                        <th>Name</th>
+                        <th>FamilyName</th>
+                        <th>email</th>
+                        <th>birth_year</th>
+                        <th>age</th>
+                        <th>ville</th>
+                        <th>Numtel</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {% for personne in personnes %}
+
+                    <tr>
+                        <td> {{ personne.id }}</td>
+                        <td> {{ personne.name }}</td>
+                        <td> {{ personne.FamilyName }}</td>
+                        <td> {{ personne.email }}</td>
+                        <td> {{ personne.BirthYear }}</td>
+                        <td> {{ personne.Age }}</td>
+                        <td> {{ personne.Ville }}</td>
+                        <td> {{ personne.NumTel }}</td>
+                        <td><a href={{ path('showRow',{"id":personne.id }) }}><button>Show</button></a>
+                      <a href={{ path('formulaireUptade',{"id":personne.id }) }}><button>Update</button></a>
+                      <a href={{ path('hide',{"id":personne.id }) }}><button>hide</button></a>
+                     <a href={{ path('remove',{"id":personne.id }) }}><button>remove</button></a></td>
+                    </tr>
+                        
+                        {% endfor %}
+                </tbody>
+            </table>
+            
+</body>
+<html>
