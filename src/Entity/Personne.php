@@ -61,6 +61,11 @@ class Personne
      */
     private $supprimer ;
 
+
+    function __construct() {
+        $this->supprimer = 'false';
+    }
+
     public function getId(): ?int
     {
         return $this->id;
